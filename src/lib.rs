@@ -1,3 +1,31 @@
+//! Raw persistent database for storing string lines.
+//! 
+//! `string_lines` is on [Crates.io][string_lines] and [GitHub][github].
+//! 
+//!# Example
+//! 
+//!```
+//! use string_lines::StringLines;
+//! let mut lines = StringLines::open(
+//! 	"target/push_pop.example"
+//! ).expect("Unable to open file");
+//! for i in 1..101 {    	
+//! 	let line = format!("line {}",i);	
+//! 	let _ = lines.push(&line).expect("Unable to push line");
+//! }
+//!loop {
+//!	match lines.pop().expect("Unable to pop line") {
+//!		Some(line) => {
+//!			println!("{}",line);
+//!		},
+//!		None => {
+//!			break;
+//!		}
+//!	}
+//!}
+//!```
+//!
+
 extern crate file_lock;
 use std::fs::{OpenOptions,File};
 use std::io;
@@ -14,12 +42,14 @@ use std::string::FromUtf8Error;
 use std::iter::Extend;
 
 #[derive(Debug)]
+/// Raw persistent database for storing string lines.
 pub struct StringLines {
 	file: File,
 	lock: Lock,	
 }
 
 #[derive(Debug)]
+/// Error enum
 pub enum Error {
 	/// File error
 	FileError(io::Error),

@@ -2,6 +2,8 @@
 name = "string-lines"
 version = "0.1.0"
 authors = ["Mikhail Svetov <svmk-work@yandex.ru>"]
+keywords = ["string","lines","persistent","database"]
+description="Raw persistent database for storing string lines."
 
 [dependencies]
 file-lock="0.0"
