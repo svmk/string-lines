@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/svmk/string-lines.svg?branch=master)](https://travis-ci.org/svmk/string-lines)
 [![Latest Version](https://img.shields.io/crates/v/string-lines.svg)](https://crates.io/crates/string-lines)
 
-[API Documentation][http://svmk.github.io/string-lines/0.1.0/string_lines/index.html]
+[API Documentation](http://svmk.github.io/string-lines/0.1.0/string_lines/index.html)
 
 Raw persistent database for storing string lines.
 
