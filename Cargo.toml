@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Mikhail Svetov <svmk-work@yandex.ru>"]
 keywords = ["string","lines","persistent","database"]
 description="Raw persistent database for storing string lines."
+license="AGPL-3.0/GPL-3.0/MIT/Apache-2.0"
+documentation="http://svmk.github.io/string-lines/0.1.0/string_lines/index.html"
+repository="https://github.com/svmk/string-lines/"
 
 [dependencies]
 file-lock="0.0"
